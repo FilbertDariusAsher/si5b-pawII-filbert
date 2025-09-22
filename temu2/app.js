@@ -6,8 +6,8 @@ const port = 3000;
 app.use(express.static('public'));
 
 // 2. route tambahan opsional
-app.get('/', (req, res) => {
-  res.sendFile('<h1>tentang kami</h1> <p>ini adalah halaman tentang kami</p>');
+app.get('/about', (req, res) => {
+  res.send('<h1>tentang kami</h1> <p>ini adalah halaman tentang kami</p>');
 });
 
 // 3. jalankan server
