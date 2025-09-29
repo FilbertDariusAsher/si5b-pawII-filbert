@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Sederhana</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { text-align: center; }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      display: inline-block;
+      text-align: center;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <div class="card">
+    <h2>Users</h2>
+    <p><%= data.users %></p>
+  </div>
+  <div class="card">
+    <h2>Sales</h2>
+    <p><%= data.sales %></p>
+  </div>
+  <div class="card">
+    <h2>Revenue</h2>
+    <p>$<%= data.revenue %></p>
+  </div>
+  <div class="card">
+    <h2>Messages</h2>
+    <p><%= data.messages %></p>
+  </div>
+</body>
+</html>
