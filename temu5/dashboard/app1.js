@@ -18,7 +18,7 @@ app.get("/add", (req, res) => {
 
 app.post("/add", (req, res) => {
     const { name, qty, price } = req.body;
-    product.push({ name, qty: parseInt(qty), price: parseFloat(price) });
+    product.push({ name, qty: parseInt(qty), price: parseInt(price) });
     res.redirect("/minimarket");
 });
 
