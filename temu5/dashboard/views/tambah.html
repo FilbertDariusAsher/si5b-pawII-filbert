@@ -7,21 +7,21 @@
 <body class="bg-light">
 <div class="container mt-5">
   <h1>Tambah Produk</h1>
-  <form method="POST" action="/add">
+  <form method="POST" action="/list">
     <div class="mb-3">
       <label class="form-label">Nama Barang</label>
-      <input type="text" class="form-control" name="name" required>
+      <input type="text" class="form-control" name="nama" required>
     </div>
     <div class="mb-3">
-      <label class="form-label">Qty</label>
-      <input type="number" class="form-control" name="qty" required>
+      <label class="form-label">stock</label>
+      <input type="number" class="form-control" name="stok" required>
     </div>
     <div class="mb-3">
       <label class="form-label">Harga</label>
-      <input type="number" class="form-control" name="price" required>
+      <input type="number" class="form-control" name="harga" required>
     </div>
     <button type="submit" class="btn btn-primary">Simpan</button>
-    <a href="/" class="btn btn-secondary">Kembali</a>
+    <a href="minimarket" class="btn btn-secondary">Kembali</a>
   </form>
 </div>
 </body>

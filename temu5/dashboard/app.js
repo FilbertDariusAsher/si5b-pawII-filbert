@@ -1,15 +1,17 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const bodyParser = require("body-parser");
+const penjualanRoutes = require('./routes/penjualanRoutes');
+
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('view engine', 'ejs');
-app.get('/dashboard', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
+app.use (bodyParser.json());
+app.use ('/penjualan', penjualanRoutes);
+
+app.get('/', (req,res) => {
+  res.send('aplikasi Penjualan sederhana - mvc(model Array)');
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`server is running on http://localhost:${PORT}`);
 });
